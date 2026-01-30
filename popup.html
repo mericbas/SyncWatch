@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SyncWatch</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 SyncWatch</h1>
+    <p class="subtitle">Birlikte İzle</p>
+
+    <!-- Bağlantı Durumu -->
+    <div id="status" class="status disconnected">
+      <span class="status-dot"></span>
+      <span class="status-text">Bağlı değil</span>
+    </div>
+
+    <!-- Video Durumu -->
+    <div id="videoStatus" class="video-status">
+      <span id="videoStatusText">Video aranıyor...</span>
+    </div>
+
+    <!-- Ana Menü -->
+    <div id="mainMenu" class="menu">
+      <button id="createRoomBtn" class="btn btn-primary">
+        <span class="btn-icon">➕</span>
+        Oda Oluştur
+      </button>
+      <div class="divider">
+        <span>veya</span>
+      </div>
+      <input type="text" id="roomCodeInput" placeholder="Oda kodunu gir..." maxlength="10">
+      <button id="joinRoomBtn" class="btn btn-secondary">
+        <span class="btn-icon">🚪</span>
+        Odaya Katıl
+      </button>
+    </div>
+
+    <!-- Oda Bilgisi -->
+    <div id="roomInfo" class="room-info hidden">
+      <div class="room-code-container">
+        <span class="label">Oda Kodu:</span>
+        <div class="room-code-box">
+          <span id="roomCode" class="room-code"></span>
+          <button id="copyCodeBtn" class="btn-icon-only" title="Kopyala">📋</button>
+        </div>
+      </div>
+      <div id="peerStatus" class="peer-status">
+        <span>Arkadaşın bekleniyor...</span>
+      </div>
+      <button id="leaveRoomBtn" class="btn btn-danger">
+        <span class="btn-icon">🚪</span>
+        Odadan Ayrıl
+      </button>
+    </div>
+
+    <!-- Senkronizasyon Kontrolleri -->
+    <div id="syncControls" class="sync-controls hidden">
+      <div class="sync-header">
+        <span class="sync-icon">🔄</span>
+        <span>Senkronize</span>
+      </div>
+      <button id="syncNowBtn" class="btn btn-sync">
+        <span class="btn-icon">⚡</span>
+        Şimdi Senkronize Et
+      </button>
+    </div>
+
+    <footer>
+      <p>Herhangi bir sitede çalışır</p>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "syncwatch",
+  "version": "1.0.0",
+  "description": "Watch videos together with friends",
+  "dependencies": {
+    "peerjs": "^1.5.2"
+  }
+}
